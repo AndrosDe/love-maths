@@ -1,0 +1,11 @@
+What functions do we need in Java Script?
+
+- runGame()
+- check Answer
+- calculateCorrectAnswer()
+- incrementScore()
+- incrementWrongAnswer()
+- dispalyAdditionQuestion()
+- displaySubtractQuestion()
+- displayMultiplyQuestion()
+- displayDivisionQuestion()

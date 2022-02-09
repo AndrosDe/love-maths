@@ -18,8 +18,14 @@ document.addEventListener ("DOMContentLoaded", function() {  // Once the DOM has
       }
     })
   }
-  
-  runGame ("addition");
+
+  document.getElementById("answer-box").addEventListener("keydown", function(event){  //checking for an event
+    if (event.key === "Enter"){ // in this case: If enter was pressed, the check Answer function should run
+      checkAnswer();
+    }
+  })
+
+  runGame("addition");
 })
 
 /**
@@ -27,6 +33,10 @@ document.addEventListener ("DOMContentLoaded", function() {  // Once the DOM has
  * and after the user's answer has been processed
  */
 function runGame (gameType) {
+
+  document.getElementById("answer-box").value = ""; //clears out the answer box from the previous game
+  document.getElementById("answer-box").focus(); //focus the curser on the answerbox when loading the game to type in the answer
+
   // Creates two random numbers between 1 and 25
   let num1 = Math.floor(Math.random() *25) + 1;
   let num2 = Math.floor(Math.random() *25) + 1;
